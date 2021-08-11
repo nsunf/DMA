@@ -305,6 +305,10 @@ iframe {
     text-align: left;
   }
 
+  #detailCell1 {
+    margin-top: 0px;
+  }
+
   .des_mobile {
     display: block;
   }
