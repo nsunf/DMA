@@ -98,10 +98,14 @@
   -webkit-appearance: none; 
 }
 
-#submitBtn:hover {
-  cursor: pointer;
-  background: rgb(248, 248, 248);
+@media (hover:hover) {
+  #submitBtn:hover {
+    cursor: pointer;
+    background: rgb(248, 248, 248);
+  }
 }
+
+
 
 #loadingBtn {
   display: none;

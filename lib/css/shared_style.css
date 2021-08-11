@@ -82,10 +82,13 @@ h1 {
   display: inline-block;
 }
 
-#nav li a:hover .hoverE { 
-  width: 16px;
-  display: inline-block;
+@media (hover:hover) {
+  #nav li a:hover .hoverE { 
+    width: 16px;
+    display: inline-block;
+  }
 }
+
 
 #nav .selected {
   font-size: 20px;
