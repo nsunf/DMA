@@ -30,8 +30,8 @@
       default: ;
     }
     
-    return '<div id="'.$id.'" class="arrowBtn" '.$style.'>
-    <img src="lib/src/icon/arrow_right.svg" onclick="location.href=\'project.php?id='.$nextProject.'\'">
+    return '<div id="'.$id.'" class="arrowBtn" '.$style.' onclick="location.href=\'project.php?id='.$nextProject.'\'">
+    <img src="lib/src/icon/arrow_right.svg">
     </div>';
 
   }
