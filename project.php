@@ -120,9 +120,9 @@
                     </div><div class="flexWrap">';
 
                 if (substr($file, -3) == 'mp4') {
-                  echo '<video controls width="250">
-                      <source src="'.$media.'">
-                      Sorry, your browser doesn\'t support embedded videos.
+                  echo '<video controls width="250" autoplay muted playsinline loop>
+                      <source src="'.$media.'" type="video/mp4">
+                      
                     </video>
                     
                   ';
