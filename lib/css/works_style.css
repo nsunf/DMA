@@ -119,9 +119,32 @@
 }
 
 @media (max-width: 767px) {
+  #wrap {
+    overflow: initial;
+  }
+
+  #leftSection {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    background: white;
+  }
+
+  #container {
+    height: fit-content !important;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  #wrap {
+    height: fit-content;
+  }
+
   #scrollView {
     flex-direction: column;
-    height: calc(100vh - 110px);
+    height: fit-content;
     justify-content: initial;
   }
 
