@@ -119,8 +119,13 @@
 }
 
 @media (max-width: 767px) {
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
   #wrap {
     overflow: initial;
+    height: fit-content;
   }
 
   #leftSection {
@@ -131,14 +136,6 @@
   }
 
   #container {
-    height: fit-content !important;
-  }
-
-  body::-webkit-scrollbar {
-    display: none;
-  }
-
-  #wrap {
     height: fit-content;
   }
 

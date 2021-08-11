@@ -247,6 +247,29 @@ iframe {
 }
 
 @media (max-width: 767px) {
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  #container {
+    height: fit-content;
+  }
+
+  #wrap {
+    overflow: initial;
+  }
+
+  #leftSection {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    background: white;
+  }
+
+  #content {
+    height: fit-content;
+  }
+
   #descriptionList {
     position: static;
     bottom: 0px;
@@ -266,7 +289,7 @@ iframe {
 
   #detailFlex {
     padding:  0px;
-    height: 100vh;
+    height: fit-content;
   }
 
   .detailCell {
