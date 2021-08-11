@@ -1,0 +1,298 @@
+
+/* Font */
+h1, li, span, input, textarea, div, p {
+  font-family: "Helvetica Neue, Helvetica, Roboto, Arial", sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+/* Main */
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  /* min-height: 576px; */
+}
+
+#container {
+  height: 100%;
+}
+
+#wrap {
+  display: flex;
+  align-items: stretch;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Header */
+#header {
+  height: 72px;
+  /* padding: 16px; */
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0px;
+  font-weight: 100;
+}
+
+
+/* Left Section */
+#leftSection {
+  width:  240px;
+  flex-shrink: 0;
+  position: relative;
+  padding: 24px 32px;
+}
+
+
+/* Nav */
+#nav ul {
+  margin: 16px;
+  padding: 0px;
+  list-style: none;
+}
+
+#nav li {
+  font-size: 18px;
+  font-weight: 100;
+  margin: 32px 0px;
+}
+
+#nav li a:hover {
+  color: rgb(104, 104, 104);  
+}
+
+.hoverE {
+  height: 1px;
+  background: black;
+  transition: width 0.5s ease-in-out;
+  -webkit-transition: width 0.5s ease-in-out;
+  width: 0px;
+  display: inline-block;
+}
+
+#nav li a:hover .hoverE { 
+  width: 16px;
+  display: inline-block;
+}
+
+#nav .selected {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+#nav .selected span {
+  height: 1px;
+  width: 120px;
+  display: inline-block;
+  background: black;
+}
+
+
+/* SNS Box */
+#snsBox {
+  position: absolute;
+  left: 32px;
+  bottom: 16px;
+}
+
+.snsIcon {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.snsIcon a>* {
+  display: inline-block;
+}
+
+.snsLink {
+  width: 0px;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+
+#content {
+  flex-grow: 1;
+  height: 100%;
+  /* height: fit-content; */
+
+}
+
+
+/* Scroll Bar */
+#scrollBar {
+  float: left;
+  width: 2px;
+  height: 50vh;
+  margin: 0px 16px;
+  border-radius: 1px;
+  background: rgba(184, 184, 184, 1);
+
+  position: relative;
+  top: calc(50% - 25vh);
+  left: -5%;
+
+  opacity: 0;
+
+  animation-name: scrollBarSlideIn;
+  animation-delay: 1.2s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+#scrollBarThumb {
+  width: 100%;
+  height: 33%;
+  border-radius: 1px;
+  background: rgb(0, 0, 0);
+}
+
+/* Right Section */
+#rightSection {
+  border-left: 0.5px solid black;
+  box-sizing: border-box;
+  width: 24px;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+#rightSection ul {
+  list-style: none;
+  padding: 16px 0px;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#rightSection li {
+  transform: rotate(90deg);
+
+}
+
+/* @media (min-width: 1024px) and (max-width: 1600px) {
+  #leftSection {
+    width: 216px;
+  }
+  #nav .selected span {
+    width: 96px;
+  }
+} */
+
+
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  #leftSection {
+    width: 160px;
+  }
+
+  #nav ul {
+    margin: 8px;
+  }
+
+  #nav .selected span {
+    width: 64px;
+  }
+  
+}
+
+
+@media (max-width: 767px) {
+  #wrap {
+    flex-direction: column;
+    /* height: initial; */
+  }
+
+  
+  #leftSection {
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+
+  #nav ul {
+    margin: 0px;
+    /* padding: 0px; */
+    /* list-style: none; */
+    display: flex;
+    justify-content: space-between;
+    /* width: 100%; */
+  }
+
+  #nav li {
+    font-size: 16px;
+    /* font-weight: 100; */
+    margin: 0px;
+
+  }
+
+  /* #nav li a:hover {
+    color: rgb(104, 104, 104);  
+  } */
+
+  .hoverE {
+    display: none;
+  }
+
+  #nav li a:hover .hoverE { 
+    display: none;
+  }
+
+  #nav .selected {
+    font-size: 16px;
+    font-weight: 100;
+    border-bottom: 1px solid black;
+  }
+
+  #nav .selected span {
+    /* height: 1px;
+    width: 120px;
+    display: inline-block;
+    background: black; */
+    display: none;
+  }
+
+  #snsBox {
+    display: none;
+  }
+
+  #content {
+    height: fit-content;
+  }
+
+  #scrollBar {
+    display: none;
+  }
+
+  #rightSection {
+    display: none;
+  }
+}
+
+@keyframes scrollBarSlideIn {
+  from {
+    left: -5%;
+    opacity: 0;
+  }
+
+  to {
+    left: 0%;
+    opacity: 1;
+  }
+}

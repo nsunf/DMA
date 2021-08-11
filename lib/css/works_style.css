@@ -1,0 +1,150 @@
+.preparing {
+  
+}
+
+.preparing::before {
+  content: "This Project is in Coming";
+  position: absolute;
+  color: Black;
+  width: 100%;
+  height: 100%;
+  /* background: black; */
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 16px;
+  z-index: 3;
+  box-sizing: border-box;
+}
+.blur {
+  filter: blur(8px);
+  z-index: 2;
+}
+
+
+
+/* Works */
+
+
+#scrollView {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+#scrollView::-webkit-scrollbar {
+  display: none;
+}
+
+.columnWrap {
+  width: 28%;
+  /* height: fit-content; */
+  height: 110vw;
+  overflow: hidden;
+}
+
+.worksColumn {
+  
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+}
+
+#column1 {
+  transform: translateY(100vh);
+}
+
+#column2 {
+  flex-direction: column-reverse;
+  transform: translateY(-100%);
+}
+
+#column3 {
+  transform: translateY(100vh);
+}
+
+.cells {
+  position: relative;
+  /* margin: 50% 0; */
+}
+
+.cells img {
+  width: 100%;
+  /* aspect-ratio: 4/3; */
+  object-fit: cover;
+}
+
+.cellDescription {
+  height: 72px;
+  z-index: 1;
+  font-size: 14px;
+}
+
+
+.cells a:hover {
+  text-decoration: underline;
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  #scrollView {
+    flex-direction: column;
+    justify-content: initial;
+    align-items: center;
+  }
+
+  .columnWrap {
+    overflow: initial;
+    width: 50%;
+    height: fit-content;
+  }
+
+  .worksColumn {
+  }
+
+  #column1 {
+    transform: translateY(0px);
+  }
+
+  #column2 {
+    flex-direction: column;
+    transform: translateY(0px);
+  }
+
+  #column3 {
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 767px) {
+  #scrollView {
+    flex-direction: column;
+    height: calc(100vh - 110px);
+    justify-content: initial;
+  }
+
+  .columnWrap {
+    overflow: initial;
+    width: 100%;
+    height: fit-content;
+  }
+
+  .cellDescription {
+    padding: 0px 8px;
+  }
+  
+  #column1 {
+    transform: translateY(0px);
+  }
+
+  #column2 {
+    flex-direction: column;
+    transform: translateY(0px);
+  }
+
+  #column3 {
+    transform: translateY(0px);
+  }
+}

@@ -1,0 +1,201 @@
+
+#content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  opacity: 0;
+  animation-name: slideIn;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#contactContentCenter {
+  /* border: 1px solid black; */
+  width: 70%;
+   
+}
+
+#snsBox_main {
+  display: flex;
+  margin-bottom: 64px;
+  
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+}
+
+.snsIcon_main {
+  /* flex-grow: 1; */
+  width: 50%;
+  margin: 16px 0px;
+}
+
+.snsIcon_main a {
+  display: flex;
+  align-items: center;
+}
+
+.snsIcon_main img {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+}
+
+.snsLink_main {
+  font-size: 16px;
+}
+
+.textInput {
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 0px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.textInput:focus {
+  outline: none;
+}
+
+#name_email_inputWrap {
+  display: flex;
+  margin-bottom: 64px;
+}
+
+#name_email_inputWrap>div {
+  width: 50%;
+}
+
+.textInput {
+  width: 90%;
+}
+
+#messageInput {
+  width: 95%;
+  height: 160px;
+  padding-top: 4px;
+  resize: none;
+}
+
+#submitWrap {
+  margin-top: 16px;
+  overflow: hidden;
+}
+
+#submitBtn {
+  float: right;
+  margin-right: 5%;
+  height: 36px;
+  width: 80px; 
+  background: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 6px;
+  font-size: 16px;
+  -webkit-appearance: none; 
+}
+
+#submitBtn:hover {
+  cursor: pointer;
+  background: rgb(248, 248, 248);
+}
+
+#loadingBtn {
+  display: none;
+  float: right;
+  margin-right: 5%;
+  padding: 0px 24px;
+  border: 1px solid black;
+  border-radius: 6px;
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  #submitBtn {
+    width: 96px;
+    height: 40px;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .snsIcon_main img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+
+  .snsLink_main {
+    font-size: 14px;
+  }
+
+  #name_email_inputWrap {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  #name_email_inputWrap>div {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  #submitBtn {
+    
+    background: transparent;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  #content {
+    padding: 8px;
+  }
+
+  #contactContentCenter {
+    width: 100%;
+  }
+
+  .snsIcon_main img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+
+  .snsLink_main {
+    font-size: 12px;
+  }
+
+  #name_email_inputWrap {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  #name_email_inputWrap>div {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .textInput {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #messageInput {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
