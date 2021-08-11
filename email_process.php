@@ -1,4 +1,5 @@
 <?php
+header('Content-type: text/html; charset=utf-8'); 
 include_once('PHPMailer/PHPMailerAutoload.php');
 
 function mailer($fname, $fmail, $to, $subject, $content, $type=0, $file="", $cc="", $bcc="")
@@ -31,10 +32,10 @@ function mailer($fname, $fmail, $to, $subject, $content, $type=0, $file="", $cc=
         }
   }
   if ($mail->send()) {
-    echo '<script>alert("메일 발송이 완료되었습니다.\nYour mail has been sent.");</script>';
+    echo '<script charset="utf-8">alert("메일 발송이 완료되었습니다.\nYour mail has been sent.");</script>';
     echo '<script>window.location = "/contact.php"; </script>';
   } else {
-    echo '<script>alert("메일 발송이 실패하였습니다.\n Mailing failed");</script>';
+    echo '<script charset="utf-8">alert("메일 발송이 실패하였습니다.\n Mailing failed");</script>';
     echo '<script>window.location = "/contact.php"; </script>';
   }
 }
