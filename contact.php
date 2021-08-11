@@ -4,7 +4,6 @@
 <html>
   <head>
     <?php echo file_get_contents('view/shared/head'); ?>
-    <link rel="shortcut icon" type="image/x-icon" href="dmaFavicon.ico"/>
     <title>DMA - Contact</title>
     <link rel="stylesheet" href="lib/css/contact_style.css" type="text/css">
     <link rel="stylesheet" href="lib/css/shared_style.css" type="text/css">

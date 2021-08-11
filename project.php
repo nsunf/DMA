@@ -40,7 +40,6 @@
 <html>
   <head>
     <?php echo file_get_contents('view/shared/head'); ?>
-    <link rel="shortcut icon" type="image/x-icon" href="dmaFavicon.ico"/>
     <title><?= substr(basename($_GET['id']), 2) ?></title>
     <link href="lib/css/shared_style.css" rel="stylesheet" type="text/css" />
     <link href="lib/css/worksDetail_style.css" rel="stylesheet" type="text/css" />

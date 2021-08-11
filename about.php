@@ -3,7 +3,6 @@
 <html>
   <head>
     <?php echo file_get_contents('view/shared/head'); ?>
-    <link rel="shortcut icon" type="image/x-icon" href="dmaFavicon.ico"/>
     <title>DMA - About</title>
     <link rel="stylesheet" href="lib/css/about_style.css" type="text/css">
     <link rel="stylesheet" href="lib/css/shared_style.css" type="text/css">
