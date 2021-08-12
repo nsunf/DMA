@@ -21,8 +21,11 @@
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
 
-  filter: drop-shadow(16px 16px 16px rgba(0, 0, 0, 0.5));
+  /* filter: drop-shadow(16px 16px 16px rgba(0, 0, 0, 0.5)); */
+  filter: drop-shadow(32px 32px 16px rgba(0, 0, 0, 0.5));
   position: relative;
+
+  animation: circleAni linear 2s backwards;
 }
 
 #circle:hover {
@@ -51,4 +54,36 @@
   filter: blur(16px);
   /* transform: translateZ(0); */
   /* -webkit-transform: translateZ(0); */
+
+  animation: innerShadowAni linear 1s 1s backwards;
+}
+
+@keyframes circleAni {
+  0% {
+    opacity: 0;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+  }
+
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+  }
+
+  100% {
+    filter: drop-shadow(32px 32px 16px rgba(0, 0, 0, 0.5));
+  }
+}
+
+@keyframes innerShadowAni {
+  0% {
+    top: 25%;
+    left: 25%;
+    filter: blur(4px);
+  }
+
+  100% {
+    top: 20%;
+    left: 20%;
+    filter: blur(16px);
+  }
 }
